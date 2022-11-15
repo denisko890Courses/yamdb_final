@@ -1,19 +1,17 @@
-from http import HTTPStatus
 import uuid
-
+from http import HTTPStatus
 
 from django.shortcuts import get_object_or_404
-from rest_framework import viewsets, permissions
+from rest_framework import permissions, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.views import APIView
-
+from rest_framework_simplejwt.tokens import RefreshToken
 
 from .models import User
 from .permissions import AuthAdminSuperUserPermission
-from .serializers import (SignUpSerializer,
-                          CreateTokenSerializer, UsersSerializer)
+from .serializers import (CreateTokenSerializer, SignUpSerializer,
+                          UsersSerializer)
 
 
 class SignUpView(APIView):

@@ -1,5 +1,6 @@
-from rest_framework import serializers
 import re
+
+from rest_framework import serializers
 
 from .models import User
 
