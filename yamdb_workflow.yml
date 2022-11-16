@@ -59,6 +59,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb
+            sudo docker-compose down -v
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
